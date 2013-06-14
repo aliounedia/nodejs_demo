@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>ANSD-mobile-APP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0-rc.1/jquery.mobile-1.1.0-rc.1.min.js"></script>
+<script>
+        $.mobile.ajaxEnabled = false
+        $.mobile.ajaxLinksEnabled = false
+        $.mobile.ajaxFormsEnabled = false
+        </script>
+     
+    </head> 
+	<body
+		<div id="ma-index" data-role="page" data-theme="c">
+		   	<div data-theme="a" data-role="header" class="ui-bar-a ui-header" role="banner">
+				<a data-direction="reverse" data-icon="back" href="" title="Home" data-theme="a" data-role="button" >Back</a>
+				<h1><img src="/images/logo_ANSD.PNG" alt="loader" id="logo_ANSD" width =36 height=36 /></h1>	  
+				<a data-direction="reverse" data-icon="home" href="" title="Home" data-theme="a" data-role="button" data-iconpos="notext">Home</a>
+			</div>
+
+			<div data-role="content"> 
+
+<ul data-role="listview" data-theme="g" data-filter= "true" datafilter-placeholder="Rechercher...">
+
+
+<table> 
+{% for id, em in datasets %}
+<tr>
+  <td>
+  <a href ="{{ em.download_url }}" >
+	{{ em.name}}
+  </a>
+  </td>
+</tr>
+{% endfor %}
+</table>
+
+
+</div>
+			<div data-theme="a" data-role="header" class="ui-bar-a ui-header" role="banner">
+				<div class="ui-grid-a">
+			     <div class="ui-block-a">
+					<a data-direction="reverse" data-icon="search" href=title="Home" data-theme="a" data-role="button" data-iconpos="notext" data-inline="true"></a>
+					<a data-direction="reverse" data-icon="gear" href=title="Home" data-theme="a" data-role="button" data-iconpos="notext" data-inline="true" ></a>
+					<a data-direction="reverse" data-icon="alert" href=title="Home" data-theme="a" data-role="button" data-iconpos="notext" data-inline="true" ></a>
+					<a data-direction="reverse" data-icon="info" href=title="Home" data-theme="a" data-role="button" data-iconpos="notext"  data-inline="true"></a>
+				</div>
+				<div class="ui-block-b">&nbsp;</div>
+				</div>
+				
+				
+		     </div>
+
+
+
+	
+		</div>
+		
+	</body>
+</html>
+
+
+
+
+
